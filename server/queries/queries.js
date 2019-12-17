@@ -65,10 +65,8 @@ const resolvers = {
 		deleteLog: (_, { id }) => {
 			return Log.findByIdAndDelete(id).then((logging, err) => {
 				if (err || !logging) {
-					// console.log("delete fail")
 					return false;
 				} else {
-					// console.log("delete success")
 					return true;
 				}
 			});
